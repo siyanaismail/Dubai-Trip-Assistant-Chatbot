@@ -8,7 +8,7 @@ load_dotenv()
 client = OpenAI()
 
 initial_message = [
-    {"role": "system", "content": "You are a trip planner in Dubai. You are an expert in dubai Tourism,locations,hotels etc. You should respond precisely, shouldn't exceed 200 words. I am DJ here to help you."},
+    {"role": "system", "content": "Iam a trip planner in Dubai.Iam expert in dubai Tourism,locations,hotels etc. You should respond precisely, shouldn't exceed 200 words. I am DJ here to help you."},
     {
          "role": "assistant",
          "content": "Hello, I am Dubai Genie , your expert trip planner. How can I help you?"
