@@ -43,23 +43,18 @@ if user_message:
         "role": "user",
         "content": user_message
     }
-
-
+    # Append user message
     st.session_state.messages.append(new_message)
-    with st.chat_message(new_message["role"]):
-        st.markdown(new_message["content"])
-
-
+    # Get assistant response
     response = get_response_from_llm(st.session_state.messages)
     if response:
         response_message = {
             "role": "assistant",
             "content": response
         }
-
         st.session_state.messages.append(response_message)
-        with st.chat_message(new_message["role"]):
-            st.markdown(new_message["content"])
+    # Rerun to display both user and assistant messages immediately
+    st.experimental_rerun()
 
 
 
