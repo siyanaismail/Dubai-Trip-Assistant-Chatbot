@@ -54,7 +54,7 @@ if user_message:
         }
         st.session_state.messages.append(response_message)
     # Rerun to display both user and assistant messages immediately
-    st.experimental_rerun()
+    st.rerun()
 
 
 
